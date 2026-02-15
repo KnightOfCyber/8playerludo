@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+  <title>8 Player Ludo (Offline)</title>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div id="mainWrapper">
+
+    <h1>8 Player Ludo (Offline)</h1>
+
+    <div id="topBar">
+      <div id="turnInfo">Turn: Player 1</div>
+
+      <button id="musicBtn">🔇 Music OFF</button>
+    </div>
+
+    <div id="hint">Tap your dice box to roll.</div>
+
+    <div id="boardWrapper">
+      <div id="board"></div>
+    </div>
+
+    <div id="bottomPanel">
+      <div id="playersList"></div>
+
+      <div id="winnersBox">
+        <h3>🏆 Winners</h3>
+        <ul id="winnerList">
+          <li>1. -</li>
+          <li>2. -</li>
+          <li>3. -</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+
+</body>
+</html>
